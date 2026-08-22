@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batya Nightingale — Molecular Diagnostics &amp; Pathology</title>
+<meta name="description" content="Batya Nightingale is a molecular diagnostics and pathology specialist in New York, working in digital pathology, wildlife disease screening, and qPCR assay development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B1826;
+    --hema:#4B3A79;
+    --hema-soft:#6E5CA0;
+    --eosin:#C0697F;
+    --paper:#F3F1F5;
+    --paper-deep:#E8E4EC;
+    --rule:#CFC8D9;
+    --muted:#5D566E;
+
+    --display:"Newsreader",Georgia,serif;
+    --body:"Archivo",system-ui,-apple-system,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+
+    --gutter:clamp(1.25rem,5vw,4.5rem);
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--eosin);color:#fff;}
+  :focus-visible{outline:2px solid var(--hema);outline-offset:3px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter);}
+
+  /* ---------- masthead ---------- */
+  .bar{
+    position:sticky;top:0;z-index:20;
+    background:rgba(243,241,245,.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.85rem;padding-bottom:.85rem;}
+  .bar strong{font-family:var(--display);font-weight:500;font-size:1.02rem;letter-spacing:.01em;}
+  .bar nav{display:flex;gap:1.4rem;}
+  .bar nav a{
+    font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent;
+  }
+  .bar nav a:hover{color:var(--hema);border-bottom-color:var(--eosin);}
+  @media(max-width:720px){.bar nav{display:none;}}
+
+  /* ---------- hero: the slide ---------- */
+  .hero{padding-top:clamp(2.5rem,7vw,5rem);padding-bottom:clamp(2.5rem,6vw,4.5rem);}
+  .eyebrow{
+    font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 1.6rem;
+  }
+  .slide{
+    display:grid;grid-template-columns:minmax(280px,42%) 1fr;
+    border:1px solid var(--rule);
+    background:#FBFAFC;
+    box-shadow:0 1px 0 rgba(27,24,38,.06),0 18px 40px -32px rgba(75,58,121,.55);
+    overflow:hidden;
+  }
+  .label{
+    padding:clamp(1.5rem,3.5vw,2.6rem);
+    background:
+      linear-gradient(180deg,#F7F5F9 0%,#EFEBF3 100%);
+    border-right:1px solid var(--rule);
+    position:relative;
+  }
+  .label::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(75,58,121,.14) .5px,transparent .5px);
+    background-size:3px 3px;opacity:.55;
+  }
+  .label h1{
+    font-family:var(--display);font-weight:300;
+    font-size:clamp(2.3rem,5.4vw,3.5rem);
+    line-height:1.02;letter-spacing:-.015em;margin:0 0 1.1rem;
+  }
+  .label h1 span{display:block;}
+  .label h1 em{font-style:italic;color:var(--hema);}
+  .role{font-size:.98rem;color:var(--muted);margin:0 0 1.6rem;max-width:26ch;}
+  .label .meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;line-height:2;color:var(--muted);}
+  .label .meta a{text-decoration:none;border-bottom:1px solid var(--rule);}
+  .label .meta a:hover{color:var(--hema);border-bottom-color:var(--eosin);}
+
+  .field{position:relative;min-height:300px;background:#FCFBFD;}
+  .field svg{position:absolute;inset:0;width:100%;height:100%;display:block;}
+  .caption{
+    font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;
+  }
+  @media(max-width:760px){
+    .slide{grid-template-columns:1fr;}
+    .label{border-right:0;border-bottom:1px solid var(--rule);}
+    .field{min-height:170px;}
+  }
+
+  /* ---------- generic section ---------- */
+  section.block{padding-top:clamp(2.8rem,6vw,4.6rem);padding-bottom:clamp(2.8rem,6vw,4.6rem);border-top:1px solid var(--rule);}
+  .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:2.2rem;flex-wrap:wrap;}
+  .head h2{
+    font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,3.2vw,2.15rem);
+    margin:0;letter-spacing:-.01em;
+  }
+  .tally{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+
+  .lede{
+    font-family:var(--display);font-weight:300;
+    font-size:clamp(1.18rem,2.4vw,1.5rem);line-height:1.55;
+    max-width:60ch;margin:0 0 1.4rem;
+  }
+  .prose p{max-width:62ch;color:var(--muted);margin:0 0 1rem;}
+  .prose i{color:var(--ink);}
+
+  /* ---------- entry rows ---------- */
+  .entry{
+    display:grid;grid-template-columns:8.5rem 1fr;gap:0 2rem;
+    padding:1.35rem 0;border-top:1px solid var(--rule);
+  }
+  .entry:first-of-type{border-top:0;}
+  .entry .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);padding-top:.28rem;}
+  .entry h3{font-family:var(--display);font-weight:500;font-size:1.14rem;margin:0 0 .25rem;line-height:1.35;}
+  .entry .where{font-size:.93rem;color:var(--muted);margin:0;}
+  .entry ul{margin:.6rem 0 0;padding-left:1.05rem;color:var(--muted);font-size:.94rem;}
+  .entry li{margin-bottom:.3rem;}
+  @media(max-width:640px){
+    .entry{grid-template-columns:1fr;gap:.35rem;}
+    .entry .when{padding-top:0;}
+  }
+
+  /* ---------- publications ---------- */
+  .pub{padding:1.5rem 0;border-top:1px solid var(--rule);}
+  .pub:first-of-type{border-top:0;}
+  .pub .authors{font-size:.9rem;color:var(--muted);margin:0 0 .4rem;line-height:1.7;}
+  .pub .authors b{font-weight:600;color:var(--hema);}
+  .pub h3{font-family:var(--display);font-weight:400;font-size:1.16rem;line-height:1.42;margin:0 0 .5rem;max-width:64ch;}
+  .pub h3 i{font-style:italic;}
+  .pub .venue{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .pub .venue a{color:var(--hema);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .pub .venue a:hover{border-bottom-color:var(--eosin);}
+
+  /* ---------- project groups ---------- */
+  .year-group{display:grid;grid-template-columns:8.5rem 1fr;gap:0 2rem;padding:1.35rem 0;border-top:1px solid var(--rule);}
+  .year-group:first-of-type{border-top:0;}
+  .year-group > .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);padding-top:.3rem;}
+  .year-group ul{list-style:none;margin:0;padding:0;}
+  .year-group li{
+    padding-left:1.1rem;position:relative;margin-bottom:.85rem;max-width:64ch;font-size:.97rem;
+  }
+  .year-group li::before{
+    content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;
+    background:var(--eosin);
+  }
+  .year-group li i{font-family:var(--display);font-style:italic;font-size:1.06em;}
+  @media(max-width:640px){
+    .year-group{grid-template-columns:1fr;gap:.5rem;}
+    .year-group > .when{padding-top:0;}
+  }
+
+  /* ---------- talks ---------- */
+  .talk{padding:1.15rem 0;border-top:1px solid var(--rule);max-width:70ch;}
+  .talk:first-of-type{border-top:0;}
+  .talk p{margin:0;}
+  .talk .title{font-family:var(--display);font-size:1.06rem;line-height:1.45;}
+  .talk .title i{font-style:italic;}
+  .talk .venue{font-family:var(--mono);font-size:.69rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-top:.35rem;}
+  .tag{
+    display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--hema);border:1px solid var(--rule);border-radius:2px;padding:.1rem .4rem;margin-right:.5rem;vertical-align:2px;
+  }
+
+  /* ---------- facts grid ---------- */
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem;}
+  .facts h3{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;font-weight:500;}
+  .facts p{margin:0 0 .5rem;font-size:.96rem;}
+  .facts .sub{color:var(--muted);font-size:.88rem;}
+
+  /* ---------- contact ---------- */
+  .contact{border-top:1px solid var(--rule);padding-top:clamp(2.8rem,6vw,4.2rem);padding-bottom:clamp(3rem,6vw,4.5rem);}
+  .contact .lede{margin-bottom:2rem;}
+  .links{display:flex;flex-wrap:wrap;gap:.8rem 1rem;}
+  .links a{
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+    text-decoration:none;padding:.7rem 1.1rem;border:1px solid var(--hema);color:var(--hema);
+    transition:background .18s ease,color .18s ease;
+  }
+  .links a:hover{background:var(--hema);color:var(--paper);}
+  footer{border-top:1px solid var(--rule);padding:1.6rem 0 2.4rem;}
+  footer p{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0;}
+
+  /* ---------- reveal ---------- */
+  .rise{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+  .rise.seen{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .rise{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <strong>Batya Nightingale</strong>
+    <nav>
+      <a href="#work">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="wrap hero">
+  <p class="eyebrow">Molecular Diagnostics &middot; Pathology &middot; New York</p>
+
+  <div class="slide">
+    <div class="label">
+      <h1><span>Batya</span><span><em>Nightingale</em></span></h1>
+      <p class="role">Molecular diagnostics and pathology, from the wet bench to the whole-slide scanner.</p>
+      <div class="meta">
+        <div><a href="mailto:batya.nightingale@gmail.com">batya.nightingale@gmail.com</a></div>
+        <div><a href="https://orcid.org/0000-0002-0706-8951">orcid 0000-0002-0706-8951</a></div>
+        <div><a href="https://github.com/batyanight">github.com/batyanight</a></div>
+      </div>
+    </div>
+    <div class="field" aria-hidden="true">
+      <svg id="tissue" preserveAspectRatio="xMidYMid slice" viewBox="0 0 600 400"></svg>
+    </div>
+  </div>
+
+  <p class="caption">
+    <span>Nightingale, B.R.</span>
+    <span>Digital Pathology Coordinator</span>
+    <span>NYU Langone Health</span>
+    <span>2019 &ndash; present</span>
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section class="wrap block rise" id="about">
+  <div class="head">
+    <h2>About</h2>
+    <span class="tally">Overview</span>
+  </div>
+  <p class="lede">I build and run the molecular tests that tell clinicians and conservationists what is actually infecting an animal &mdash; and increasingly, I do it on screens instead of slides.</p>
+  <div class="prose">
+    <p>I currently coordinate digital pathology at NYU Langone Health's Tisch Hospital, where I support the anatomic pathology team's move to whole-slide imaging. Before that I spent five years in the Molecular Diagnostics Laboratory of the Wildlife Conservation Society at the Bronx Zoo, first as a technician and then in the pathology lab, working across the Zoological Health Program's diagnostic caseload.</p>
+    <p>My work sits where assay development meets field conservation: multiplex qPCR panels for the illegal wildlife trade, pathogen screening for chelonians and iguanas from Belize to Madagascar, novel herpesvirus and papillomavirus characterization in zoo collections, and environmental DNA surveys ranging from the New York Bight to the southern flank of Mount Everest. I am the author or co-author of four peer-reviewed papers and five conference abstracts.</p>
+    <p>I hold a B.A. in Environmental Studies from Purchase College, SUNY, where my thesis used MinION nanopore sequencing to trace mercury through songbird diets in Acadia National Park.</p>
+  </div>
+</section>
+
+<!-- RESEARCH / PROJECTS -->
+<section class="wrap block rise" id="work">
+  <div class="head">
+    <h2>Research &amp; diagnostic screenings</h2>
+    <span class="tally">Selected projects</span>
+  </div>
+
+  <div class="year-group">
+    <div class="when">2023 &ndash; ongoing</div>
+    <ul>
+      <li>Detection and characterization of a novel herpesvirus in little blue penguins (<i>Eudyptula minor</i>) at the WCS Bronx Zoo.</li>
+      <li>Detection and characterization of a novel papillomavirus in slender-horned gazelles (<i>Gazella leptoceros</i>).</li>
+    </ul>
+  </div>
+
+  <div class="year-group">
+    <div class="when">2022</div>
+    <ul>
+      <li>Five-pathogen screening of wild and captive radiated tortoises (<i>Astrochelys radiata</i>) from Madagascar.</li>
+      <li>Five-pathogen health screening of diamondback terrapins (<i>Malaclemys terrapin</i>) from Jamaica Bay Wildlife Refuge, Brooklyn.</li>
+      <li>Five-pathogen screening of bog turtles (<i>Glyptemys muhlenbergii</i>) from New Jersey.</li>
+    </ul>
+  </div>
+
+  <div class="year-group">
+    <div class="when">2021</div>
+    <ul>
+      <li>Five-pathogen screening of wild and captive Central American river turtles (<i>Dermatemys mawii</i>) from Belize.</li>
+      <li>Development of a multiplex assay to detect and differentiate big cat species in the illegal wildlife trade.</li>
+      <li>Development of a field-friendly qPCR test detecting saola (<i>Pseudoryx nghetinhensis</i>) from environmental DNA.</li>
+      <li>Environmental DNA collection from water samples across the New York Bight with the New York Seascape Program.</li>
+      <li>Development of a diagnostic pan-bacterial PCR assay, including mentorship of a collaborating volunteer scientist validating a 16S primer set for clinically relevant bacterial infections in zoological cases.</li>
+    </ul>
+  </div>
+
+  <div class="year-group">
+    <div class="when">2020</div>
+    <ul>
+      <li><i>Helicobacter</i> screening of hickatee (<i>Trachemys decussata</i>), green iguanas (<i>Iguana iguana</i>) and blue iguanas (<i>Cyclura lewisi</i>) at the Queen Elizabeth II Botanic Park, Grand Cayman.</li>
+      <li>Four-pathogen screening of southern river terrapins (<i>Batagur affinis</i>) from Cambodia and Burmese roofed turtles (<i>Batagur trivittata</i>) from Myanmar.</li>
+    </ul>
+  </div>
+
+  <div class="year-group">
+    <div class="when">2019</div>
+    <ul>
+      <li>Songbird diet analysis by fecal metabarcoding in Acadia National Park using MinION high-throughput sequencing &mdash; undergraduate thesis.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="wrap block rise" id="publications">
+  <div class="head">
+    <h2>Publications</h2>
+    <span class="tally">4 peer-reviewed &middot; <a href="https://orcid.org/0000-0002-0706-8951" style="color:var(--hema);text-decoration:none;border-bottom:1px solid var(--rule);">full list on ORCID</a></span>
+  </div>
+
+  <article class="pub">
+    <p class="authors">Henger CS, Straughan DJ, Xu CCY, <b>Nightingale BR</b>, Kretser HE, Burnham Curtis MK, McAloose D, Seimon TA</p>
+    <h3>A new multiplex qPCR assay to detect and differentiate big cat species in the illegal wildlife trade</h3>
+    <p class="venue">Scientific Reports &middot; 2023 &middot; <a href="https://doi.org/10.1038/s41598-023-36776-z">10.1038/s41598-023-36776-z</a></p>
+  </article>
+
+  <article class="pub">
+    <p class="authors">Calle PP, McClave C, Ingerman K, <b>Nightingale BR</b>, Jamieson J, Seimon TA, Harding L</p>
+    <h3><i>Helicobacter</i> screening of Grand Cayman blue iguana (<i>Cyclura lewisi</i>) and North Antillean slider (<i>Trachemys decussata angusta</i>) on Grand Cayman, Cayman Islands</h3>
+    <p class="venue">Journal of Zoo and Wildlife Medicine &middot; 2023 &middot; <a href="https://doi.org/10.1638/2022-0122">10.1638/2022-0122</a></p>
+  </article>
+
+  <article class="pub">
+    <p class="authors">Lim MCW, Seimon A, <b>Nightingale B</b>, Xu CCY, Halloy SRP, Solon AJ, Dragone NB, Schmidt SK, Tait A, Elvin S, Elmore AC, Seimon TA</p>
+    <h3>Estimating biodiversity across the tree of life on Mount Everest's southern flank with environmental DNA</h3>
+    <p class="venue">iScience &middot; 2022 &middot; <a href="https://doi.org/10.1016/j.isci.2022.104848">10.1016/j.isci.2022.104848</a></p>
+  </article>
+
+  <article class="pub">
+    <p class="authors">Seimon TA, Lim MCW, <b>Nightingale B</b>, Elvin S, Elmore AC, Seimon A</p>
+    <h3>First report of Pallas's cat in Sagarmatha National Park, Mount Everest region, Nepal</h3>
+    <p class="venue">Cat News 76 &middot; Winter 2022</p>
+  </article>
+</section>
+
+<!-- TALKS -->
+<section class="wrap block rise" id="talks">
+  <div class="head">
+    <h2>Conference abstracts &amp; presentations</h2>
+    <span class="tally">6 presented</span>
+  </div>
+
+  <div class="talk">
+    <p class="title">Investigation of carditis and associated <i>Helicobacter</i> sp. in common degus (<i>Octodon degus</i>)</p>
+    <p class="venue">American Association of Zoo Veterinarians &middot; Nashville, TN &middot; Sept 2023</p>
+  </div>
+  <div class="talk">
+    <p class="title">Novel papillomavirus associated with oral and gastric papillomas and squamous cell carcinoma in slender-horned gazelles (<i>Gazella leptoceros</i>)</p>
+    <p class="venue">American Association of Zoo Veterinarians &middot; Nashville, TN &middot; Sept 2023</p>
+  </div>
+  <div class="talk">
+    <p class="title">Validation of point-of-care molecular testing for the detection of emerging pathogens in North American amphibians</p>
+    <p class="venue">Wildlife Disease Association, 71st Annual International Conference &middot; Athens, GA &middot; Aug 2023</p>
+  </div>
+  <div class="talk">
+    <p class="title">A new DNA tool kit for monitoring big cat species in the wildlife trade</p>
+    <p class="venue">International Congress for Conservation Biology &middot; Kigali, Rwanda &middot; Dec 2021</p>
+  </div>
+  <div class="talk">
+    <p class="title"><span class="tag">Keynote</span>Next-generation sequencing reveals trophic transfer of mercury in songbirds</p>
+    <p class="venue">Purchase College School of Natural and Social Sciences Symposium &middot; Purchase, NY &middot; May 2019</p>
+  </div>
+  <div class="talk">
+    <p class="title"><span class="tag">Poster</span>Next-generation sequencing reveals trophic transfer of mercury in Acadia National Park, Maine</p>
+    <p class="venue">Northeast Natural History Conference &middot; 2019</p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="wrap block rise" id="experience">
+  <div class="head">
+    <h2>Experience</h2>
+    <span class="tally">2019 &ndash; present</span>
+  </div>
+
+  <div class="entry">
+    <div class="when">2024 &ndash; present</div>
+    <div>
+      <h3>Digital Pathology Coordinator</h3>
+      <p class="where">NYU Langone Health, Tisch Hospital &middot; New York, NY</p>
+      <ul>
+        <li>Coordinates anatomic pathology digital workflows and whole-slide imaging operations.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">2022 &ndash; 2024</div>
+    <div>
+      <h3>Pathology Laboratory Technician</h3>
+      <p class="where">Wildlife Conservation Society, Bronx Zoo &middot; Zoological Health Program</p>
+      <ul>
+        <li>Diagnostic pathology support across the zoo's caseload, including novel virus detection and characterization.</li>
+        <li>Contributed to published work on papillomavirus in gazelles and <i>Helicobacter</i>-associated carditis in degus.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">2019 &ndash; 2022</div>
+    <div>
+      <h3>Molecular Diagnostics Technician</h3>
+      <p class="where">Wildlife Conservation Society, Bronx Zoo &middot; Molecular Diagnostics Laboratory</p>
+      <ul>
+        <li>Multi-pathogen qPCR screening panels for chelonians, iguanas and amphibians across international field programs.</li>
+        <li>Assay development for wildlife-trade forensics and environmental DNA detection of rare species.</li>
+        <li>Mentored a collaborating volunteer scientist through primer validation for a pan-bacterial PCR assay.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section class="wrap block rise" id="background">
+  <div class="head">
+    <h2>Education, awards &amp; languages</h2>
+    <span class="tally">Background</span>
+  </div>
+  <div class="facts">
+    <div>
+      <h3>Education</h3>
+      <p>B.A. Environmental Studies, 2019</p>
+      <p class="sub">Purchase College, SUNY</p>
+    </div>
+    <div>
+      <h3>Awards</h3>
+      <p>American Genetic Association Tuition Scholarship, 2023</p>
+      <p>Purchase College Affiliates Award for Senior Excellence, 2018</p>
+    </div>
+    <div>
+      <h3>Languages</h3>
+      <p>English &mdash; native</p>
+      <p>American Sign Language <span class="sub">&mdash; New York metro dialect</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="wrap contact rise" id="contact">
+  <div class="head">
+    <h2>Get in touch</h2>
+    <span class="tally">New York, NY</span>
+  </div>
+  <p class="lede">Open to conversations about diagnostic assay development, digital pathology, and wildlife disease work.</p>
+  <div class="links">
+    <a href="mailto:batya.nightingale@gmail.com">Email</a>
+    <a href="https://orcid.org/0000-0002-0706-8951">ORCID</a>
+    <a href="https://github.com/batyanight">GitHub</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>&copy; <span id="yr">2026</span> Batya Nightingale</p>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* Stained tissue field: hematoxylin nuclei over eosin stroma.
+     Seeded so the composition is stable across loads. */
+  var svg = document.getElementById('tissue');
+  if(svg){
+    var seed = 20250819;
+    function rnd(){ seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; }
+    var ns = 'http://www.w3.org/2000/svg', frag = document.createDocumentFragment();
+
+    // eosinophilic background wash
+    for(var i=0;i<70;i++){
+      var b = document.createElementNS(ns,'ellipse');
+      b.setAttribute('cx', (rnd()*640-20).toFixed(1));
+      b.setAttribute('cy', (rnd()*440-20).toFixed(1));
+      b.setAttribute('rx', (28+rnd()*70).toFixed(1));
+      b.setAttribute('ry', (22+rnd()*55).toFixed(1));
+      b.setAttribute('fill', '#C0697F');
+      b.setAttribute('opacity', (0.03+rnd()*0.06).toFixed(3));
+      frag.appendChild(b);
+    }
+    // nuclei, clustered
+    for(var c=0;c<16;c++){
+      var hx = rnd()*600, hy = rnd()*400, n = 8+Math.floor(rnd()*16);
+      for(var j=0;j<n;j++){
+        var e = document.createElementNS(ns,'ellipse');
+        var a = rnd()*Math.PI*2, d = rnd()*58;
+        e.setAttribute('cx', (hx+Math.cos(a)*d).toFixed(1));
+        e.setAttribute('cy', (hy+Math.sin(a)*d*0.8).toFixed(1));
+        e.setAttribute('rx', (2.6+rnd()*3.4).toFixed(1));
+        e.setAttribute('ry', (2.0+rnd()*2.6).toFixed(1));
+        e.setAttribute('transform','rotate('+(rnd()*180).toFixed(0)+' '+(hx).toFixed(1)+' '+(hy).toFixed(1)+')');
+        e.setAttribute('fill', '#4B3A79');
+        e.setAttribute('opacity', (0.16+rnd()*0.34).toFixed(3));
+        frag.appendChild(e);
+      }
+    }
+    svg.appendChild(frag);
+  }
+
+  /* Section reveal */
+  var items = document.querySelectorAll('.rise');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('seen'); io.unobserve(en.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('seen'); });
+  }
+})();
+</script>
+</body>
+</html>
