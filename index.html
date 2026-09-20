@@ -5,19 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Batya Nightingale — Molecular Diagnostics &amp; Pathology</title>
 <meta name="description" content="Batya Nightingale is a molecular diagnostics and pathology specialist in New York, working in digital pathology, wildlife disease screening, and qPCR assay development.">
+<meta name="theme-color" content="#F2F4F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11161C" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%227%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20stroke%3D%22%232B3A67%22%20d%3D%22M100%20100%20L108.2%2090.1%20L95.6%2076%20L116.6%2061%20L102.5%2036.9%20L103.7%2039.8%22%2F%3E%3Cpath%20stroke%3D%22%232B3A67%22%20d%3D%22M100%20100%20L107.6%20101.6%20L113.2%2092.7%20L123.5%2096.4%20L133.1%2083.1%20L132%2088.1%22%2F%3E%3Cpath%20stroke%3D%22%232B3A67%22%20d%3D%22M100%20100%20L116.4%20106.2%20L126.4%2087.8%20L157.9%2094.9%20L184.6%2062.9%20L189.8%2066%22%2F%3E%3Cpath%20stroke%3D%22%232B3A67%22%20d%3D%22M100%20100%20L99.4%20107.8%20L107.3%20113.6%20L102.5%20127.3%20L116.8%20138.2%20L113.7%20138.7%22%2F%3E%3Cpath%20stroke%3D%22%232B3A67%22%20d%3D%22M100%20100%20L93.2%20107.9%20L97.8%20121.6%20L80.5%20129.8%20L87.7%20150.4%20L85%20155.9%22%2F%3E%3Cpath%20stroke%3D%22%232B3A67%22%20d%3D%22M100%20100%20L89%2097.7%20L88.8%20111.4%20L73.8%20110.7%20L73.9%20132.9%20L75%20135%22%2F%3E%3Cpath%20stroke%3D%22%232B3A67%22%20d%3D%22M100%20100%20L95.3%2093.6%20L86.1%20101.3%20L74.1%2092%20L60.8%2098.3%20L65%2097.8%22%2F%3E%3Cpath%20stroke%3D%22%232B3A67%22%20d%3D%22M100%20100%20L101.4%2092.2%20L91.8%2090.6%20L90.4%2078.7%20L72.8%2077.6%20L75.1%2079.4%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  /* ------------------------------------------------------------------
+     Palette is lifted straight from mark.py: RAMP_LIGHT / RAMP_DARK for
+     --c0..--c7, INK_LIGHT / INK_DARK for --ink, GROUND_DARK for the dark
+     page ground. The mark inherits --c0..--c7 from here, so retheming the
+     page retints the logo automatically.
+     ------------------------------------------------------------------ */
   :root{
-    --ink:#1B1826;
-    --hema:#4B3A79;
-    --hema-soft:#6E5CA0;
-    --eosin:#C0697F;
-    --paper:#F3F1F5;
-    --paper-deep:#E8E4EC;
-    --rule:#CFC8D9;
-    --muted:#5D566E;
+    --c0:#2B3A67; --c1:#2C5480; --c2:#2A6E8C; --c3:#26878A;
+    --c4:#2E9A6E; --c5:#5AA243; --c6:#96952B; --c7:#B4552A;
+
+    --ink:#1B2430;
+    --paper:#F2F4F6;
+    --panel:#FAFBFC;
+    --panel-2:#EDF0F3;
+    --rule:#C9D2DA;
+    --muted:#55636E;
+
+    --deep:#2B3A67;   /* core of the mark: links, headings accents */
+    --mid:#26878A;    /* mid-ramp teal: secondary marks */
+    --ember:#B4552A;  /* rim of the mark: the one warm accent */
+
+    --bar:rgba(242,244,246,.88);
+    --shadow:0 18px 40px -34px rgba(27,36,48,.55);
 
     --display:"Newsreader",Georgia,serif;
     --body:"Archivo",system-ui,-apple-system,sans-serif;
@@ -25,6 +42,27 @@
 
     --gutter:clamp(1.25rem,5vw,4.5rem);
     --maxw:1080px;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --c0:#7A8FD0; --c1:#63A0D2; --c2:#4FB4C6; --c3:#45C0B0;
+      --c4:#4FC98C; --c5:#85CC55; --c6:#D3C24A; --c7:#E08048;
+
+      --ink:#C6CDD6;
+      --paper:#11161C;
+      --panel:#161C24;
+      --panel-2:#1B222B;
+      --rule:#2B343E;
+      --muted:#8A96A3;
+
+      --deep:#7A8FD0;
+      --mid:#4FB4C6;
+      --ember:#E08048;
+
+      --bar:rgba(17,22,28,.88);
+      --shadow:0 18px 40px -34px rgba(0,0,0,.9);
+    }
   }
 
   *{box-sizing:border-box;}
@@ -39,92 +77,91 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;}
-  ::selection{background:var(--eosin);color:#fff;}
-  :focus-visible{outline:2px solid var(--hema);outline-offset:3px;}
+  ::selection{background:var(--deep);color:var(--paper);}
+  :focus-visible{outline:2px solid var(--mid);outline-offset:3px;}
 
   .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter);}
 
   /* ---------- masthead ---------- */
   .bar{
     position:sticky;top:0;z-index:20;
-    background:rgba(243,241,245,.88);
+    background:var(--bar);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--rule);
   }
-  .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.85rem;padding-bottom:.85rem;}
-  .bar strong{font-family:var(--display);font-weight:500;font-size:1.02rem;letter-spacing:.01em;}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.7rem;padding-bottom:.7rem;}
+  .brand{display:flex;align-items:center;gap:.6rem;}
+  .brand svg{width:28px;height:28px;display:block;color:var(--deep);flex:none;}
+  .brand strong{font-family:var(--display);font-weight:500;font-size:1.02rem;letter-spacing:.01em;}
   .bar nav{display:flex;gap:1.4rem;}
   .bar nav a{
-    font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;
     color:var(--muted);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent;
   }
-  .bar nav a:hover{color:var(--hema);border-bottom-color:var(--eosin);}
+  .bar nav a:hover{color:var(--ink);border-bottom-color:var(--ember);}
   @media(max-width:720px){.bar nav{display:none;}}
 
-  /* ---------- hero: the slide ---------- */
-  .hero{padding-top:clamp(2.5rem,7vw,5rem);padding-bottom:clamp(2.5rem,6vw,4.5rem);}
-  .eyebrow{
-    font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--muted);margin:0 0 1.6rem;
-  }
+  /* ---------- hero ---------- */
+  .hero{padding-top:clamp(2.2rem,6vw,4.4rem);padding-bottom:clamp(2.6rem,6vw,4.6rem);}
   .slide{
-    display:grid;grid-template-columns:minmax(280px,42%) 1fr;
+    display:grid;grid-template-columns:minmax(280px,44%) 1fr;
     border:1px solid var(--rule);
-    background:#FBFAFC;
-    box-shadow:0 1px 0 rgba(27,24,38,.06),0 18px 40px -32px rgba(75,58,121,.55);
+    background:var(--panel);
+    box-shadow:var(--shadow);
     overflow:hidden;
   }
   .label{
-    padding:clamp(1.5rem,3.5vw,2.6rem);
-    background:
-      linear-gradient(180deg,#F7F5F9 0%,#EFEBF3 100%);
+    padding:clamp(1.5rem,3.5vw,2.8rem);
+    background:linear-gradient(180deg,var(--panel) 0%,var(--panel-2) 100%);
     border-right:1px solid var(--rule);
-    position:relative;
-  }
-  .label::after{
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background-image:radial-gradient(rgba(75,58,121,.14) .5px,transparent .5px);
-    background-size:3px 3px;opacity:.55;
   }
   .label h1{
     font-family:var(--display);font-weight:300;
     font-size:clamp(2.3rem,5.4vw,3.5rem);
-    line-height:1.02;letter-spacing:-.015em;margin:0 0 1.1rem;
+    line-height:1.02;letter-spacing:-.015em;margin:0 0 1.15rem;
   }
   .label h1 span{display:block;}
-  .label h1 em{font-style:italic;color:var(--hema);}
-  .role{font-size:.98rem;color:var(--muted);margin:0 0 1.6rem;max-width:26ch;}
-  .label .meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;line-height:2;color:var(--muted);}
-  .label .meta a{text-decoration:none;border-bottom:1px solid var(--rule);}
-  .label .meta a:hover{color:var(--hema);border-bottom-color:var(--eosin);}
+  .role{font-family:var(--display);font-weight:400;font-size:1.22rem;color:var(--mid);margin:0 0 1.45rem;}
+  .post{font-size:.94rem;margin:0 0 1.5rem;max-width:30ch;line-height:1.5;}
+  .post span{display:block;color:var(--muted);}
+  .meta{font-family:var(--mono);font-size:.72rem;line-height:2;color:var(--muted);}
+  .meta a{text-decoration:none;border-bottom:1px solid var(--rule);}
+  .meta a:hover{color:var(--ink);border-bottom-color:var(--ember);}
 
-  .field{position:relative;min-height:300px;background:#FCFBFD;}
-  .field svg{position:absolute;inset:0;width:100%;height:100%;display:block;}
-  .caption{
-    font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--muted);margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;
-  }
+  .field{position:relative;min-height:340px;background:var(--panel);}
+  .field svg{position:absolute;inset:0;width:100%;height:100%;display:block;padding:clamp(.5rem,2vw,1.5rem);}
   @media(max-width:760px){
     .slide{grid-template-columns:1fr;}
     .label{border-right:0;border-bottom:1px solid var(--rule);}
-    .field{min-height:170px;}
+    .field{min-height:260px;}
+  }
+
+  /* The one piece of unprompted motion on the page: the mark draws itself
+     in once, chain by chain, in the order the generator emitted them. */
+  .field path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .95s cubic-bezier(.3,.7,.3,1) forwards;animation-delay:calc(var(--i) * 24ms);}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .field path{animation:none;stroke-dashoffset:0;}
   }
 
   /* ---------- generic section ---------- */
   section.block{padding-top:clamp(2.8rem,6vw,4.6rem);padding-bottom:clamp(2.8rem,6vw,4.6rem);border-top:1px solid var(--rule);}
-  .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:2.2rem;flex-wrap:wrap;}
+  .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:2.1rem;flex-wrap:wrap;}
   .head h2{
     font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,3.2vw,2.15rem);
     margin:0;letter-spacing:-.01em;
   }
-  .tally{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+  .tally{font-family:var(--mono);font-size:.7rem;color:var(--muted);}
+  .tally a{color:var(--deep);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .tally a:hover{border-bottom-color:var(--ember);}
 
   .lede{
     font-family:var(--display);font-weight:300;
     font-size:clamp(1.18rem,2.4vw,1.5rem);line-height:1.55;
-    max-width:60ch;margin:0 0 1.4rem;
+    max-width:56ch;margin:0 0 1.4rem;
   }
-  .prose p{max-width:62ch;color:var(--muted);margin:0 0 1rem;}
+  .prose p{max-width:70ch;color:var(--muted);margin:0 0 1rem;}
   .prose i{color:var(--ink);}
 
   /* ---------- entry rows ---------- */
@@ -133,11 +170,12 @@
     padding:1.35rem 0;border-top:1px solid var(--rule);
   }
   .entry:first-of-type{border-top:0;}
-  .entry .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);padding-top:.28rem;}
+  .entry .when{font-family:var(--mono);font-size:.74rem;color:var(--muted);padding-top:.3rem;}
   .entry h3{font-family:var(--display);font-weight:500;font-size:1.14rem;margin:0 0 .25rem;line-height:1.35;}
   .entry .where{font-size:.93rem;color:var(--muted);margin:0;}
   .entry ul{margin:.6rem 0 0;padding-left:1.05rem;color:var(--muted);font-size:.94rem;}
   .entry li{margin-bottom:.3rem;}
+  .entry li::marker{color:var(--mid);}
   @media(max-width:640px){
     .entry{grid-template-columns:1fr;gap:.35rem;}
     .entry .when{padding-top:0;}
@@ -147,24 +185,25 @@
   .pub{padding:1.5rem 0;border-top:1px solid var(--rule);}
   .pub:first-of-type{border-top:0;}
   .pub .authors{font-size:.9rem;color:var(--muted);margin:0 0 .4rem;line-height:1.7;}
-  .pub .authors b{font-weight:600;color:var(--hema);}
+  .pub .authors b{font-weight:600;color:var(--ink);}
   .pub h3{font-family:var(--display);font-weight:400;font-size:1.16rem;line-height:1.42;margin:0 0 .5rem;max-width:64ch;}
   .pub h3 i{font-style:italic;}
-  .pub .venue{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
-  .pub .venue a{color:var(--hema);text-decoration:none;border-bottom:1px solid var(--rule);}
-  .pub .venue a:hover{border-bottom-color:var(--eosin);}
+  .pub .venue{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+  .pub .venue a{color:var(--deep);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .pub .venue a:hover{border-bottom-color:var(--ember);}
 
   /* ---------- project groups ---------- */
   .year-group{display:grid;grid-template-columns:8.5rem 1fr;gap:0 2rem;padding:1.35rem 0;border-top:1px solid var(--rule);}
   .year-group:first-of-type{border-top:0;}
-  .year-group > .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);padding-top:.3rem;}
+  .year-group > .when{font-family:var(--mono);font-size:.74rem;color:var(--muted);padding-top:.32rem;}
   .year-group ul{list-style:none;margin:0;padding:0;}
   .year-group li{
-    padding-left:1.1rem;position:relative;margin-bottom:.85rem;max-width:64ch;font-size:.97rem;
+    padding-left:1.1rem;position:relative;margin-bottom:.85rem;max-width:68ch;font-size:.97rem;
   }
+  /* square tick rather than a dot: the mark is all straight segments */
   .year-group li::before{
-    content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;
-    background:var(--eosin);
+    content:"";position:absolute;left:0;top:.66em;width:6px;height:6px;
+    background:var(--ember);
   }
   .year-group li i{font-family:var(--display);font-style:italic;font-size:1.06em;}
   @media(max-width:640px){
@@ -172,22 +211,50 @@
     .year-group > .when{padding-top:0;}
   }
 
+  /* ---------- project panel ---------- */
+  .project{
+    border:1px solid var(--rule);
+    border-top:3px solid var(--ember);
+    background:var(--panel);
+    padding:clamp(1.4rem,3vw,2.3rem);
+    box-shadow:var(--shadow);
+  }
+  .project.quiet{border-top:1px solid var(--rule);box-shadow:none;background:transparent;margin-top:1.6rem;}
+  .project h3{font-family:var(--display);font-weight:400;font-size:clamp(1.3rem,2.6vw,1.65rem);line-height:1.3;margin:0 0 .35rem;letter-spacing:-.01em;}
+  .project h3 i{font-style:italic;}
+  .project .status{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:0 0 1.4rem;}
+  .project p.desc{margin:0 0 .9rem;max-width:68ch;color:var(--muted);}
+  .project p.desc:last-of-type{margin-bottom:1.6rem;}
+  .spec{display:grid;grid-template-columns:8.5rem 1fr;gap:.55rem 2rem;margin:0 0 1.8rem;padding:1.3rem 0 0;border-top:1px solid var(--rule);}
+  .estimates{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.6rem 2rem;margin:0 0 1.7rem;padding:1.3rem 0 0;border-top:1px solid var(--rule);}
+  .estimates .val{display:block;font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1.1;color:var(--deep);}
+  .estimates .hpd{display:block;font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:.3rem;}
+  .estimates .lab{display:block;font-size:.88rem;margin-top:.5rem;max-width:26ch;}
+  .code{font-family:var(--mono);font-size:.88em;color:var(--ink);}
+  .caveat{font-size:.88rem;color:var(--muted);max-width:68ch;margin:0 0 1.7rem;padding-left:.9rem;border-left:2px solid var(--rule);}
+  .spec dt{font-family:var(--mono);font-size:.72rem;color:var(--muted);}
+  .spec dd{margin:0;font-size:.95rem;max-width:56ch;}
+  @media(max-width:640px){
+    .spec{grid-template-columns:1fr;gap:.15rem;}
+    .spec dd{margin-bottom:.8rem;}
+  }
+
   /* ---------- talks ---------- */
-  .talk{padding:1.15rem 0;border-top:1px solid var(--rule);max-width:70ch;}
+  .talk{padding:1.15rem 0;border-top:1px solid var(--rule);max-width:72ch;}
   .talk:first-of-type{border-top:0;}
   .talk p{margin:0;}
   .talk .title{font-family:var(--display);font-size:1.06rem;line-height:1.45;}
   .talk .title i{font-style:italic;}
-  .talk .venue{font-family:var(--mono);font-size:.69rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-top:.35rem;}
+  .talk .venue{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:.35rem;}
   .tag{
-    display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--hema);border:1px solid var(--rule);border-radius:2px;padding:.1rem .4rem;margin-right:.5rem;vertical-align:2px;
+    display:inline-block;font-family:var(--mono);font-size:.66rem;
+    color:var(--paper);background:var(--mid);padding:.05rem .4rem;margin-right:.5rem;vertical-align:2px;
   }
 
   /* ---------- facts grid ---------- */
   .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem;}
-  .facts h3{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;font-weight:500;}
-  .facts p{margin:0 0 .5rem;font-size:.96rem;}
+  .facts h3{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:0 0 .7rem;font-weight:500;}
+  .facts p{margin:0 0 .5rem;font-size:.96rem;max-width:34ch;}
   .facts .sub{color:var(--muted);font-size:.88rem;}
 
   /* ---------- contact ---------- */
@@ -195,29 +262,38 @@
   .contact .lede{margin-bottom:2rem;}
   .links{display:flex;flex-wrap:wrap;gap:.8rem 1rem;}
   .links a{
-    font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
-    text-decoration:none;padding:.7rem 1.1rem;border:1px solid var(--hema);color:var(--hema);
-    transition:background .18s ease,color .18s ease;
+    font-family:var(--mono);font-size:.78rem;
+    text-decoration:none;padding:.7rem 1.1rem;border:1px solid var(--deep);color:var(--deep);
+    transition:background .18s ease,color .18s ease,border-color .18s ease;
   }
-  .links a:hover{background:var(--hema);color:var(--paper);}
+  .links a:hover{background:var(--deep);color:var(--paper);border-color:var(--deep);}
   footer{border-top:1px solid var(--rule);padding:1.6rem 0 2.4rem;}
-  footer p{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0;}
-
-  /* ---------- reveal ---------- */
-  .rise{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
-  .rise.seen{opacity:1;transform:none;}
-  @media(prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto;}
-    .rise{opacity:1;transform:none;transition:none;}
-  }
+  footer p{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin:0;}
 </style>
 </head>
 <body>
 
 <header class="bar">
   <div class="wrap">
-    <strong>Batya Nightingale</strong>
+    <a class="brand" href="#top" style="text-decoration:none">
+      <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <g fill="none" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+        <path stroke="currentColor" d="M100 100 L108.7 89.2 L94.9 74.1 L117.5 57.7 L101.9 31.9 L103.2 34.9 L100.9 34.7"/>
+        <path stroke="currentColor" d="M100 100 L114 93 L109.4 75.7 L132.2 62.3 L124.2 32.8 L125.7 30.3 L123.6 29.1"/>
+        <path stroke="currentColor" d="M100 100 L114.3 100.1 L123.5 82.3 L148 90 L164.4 61.3 L162.1 59.3 L158.4 56"/>
+        <path stroke="currentColor" d="M100 100 L107.1 113.9 L127.1 115.2 L139.3 139 L168.2 140.8 L169.3 140 L167.2 141.3"/>
+        <path stroke="currentColor" d="M100 100 L97.5 110.5 L111.9 117.3 L106 138.2 L128.7 140.1 L126 143.4 L128.6 148.4"/>
+        <path stroke="currentColor" d="M100 100 L96.8 116.4 L114 127.3 L96.2 152.4 L121.3 180.1 L122.9 185.1 L127.5 184.7"/>
+        <path stroke="currentColor" d="M100 100 L91.5 99.9 L91.4 110.4 L79 114.2 L81.1 133.1 L83.6 135 L81.2 133.4"/>
+        <path stroke="currentColor" d="M100 100 L80.6 94.3 L68.7 117.8 L37.9 99.1 L7.9 127 L13.3 134.3 L17.4 135.1"/>
+        <path stroke="currentColor" d="M100 100 L98.4 90.8 L84.6 94.1 L80.4 79 L61.2 82.7 L63.7 81.7 L67.9 83.6"/>
+        <path stroke="currentColor" d="M100 100 L102.9 82.7 L79.7 69.8 L88 39.3 L55.4 27.9 L61.3 33.6 L63.1 36.2"/>
+        </g>
+      </svg>
+      <strong>Batya Nightingale</strong>
+    </a>
     <nav>
+      <a href="#projects">Projects</a>
       <a href="#work">Research</a>
       <a href="#publications">Publications</a>
       <a href="#talks">Talks</a>
@@ -227,58 +303,172 @@
   </div>
 </header>
 
-<main>
+<main id="top">
 
 <!-- HERO -->
 <section class="wrap hero">
-  <p class="eyebrow">Molecular Diagnostics &middot; Pathology &middot; New York</p>
-
   <div class="slide">
     <div class="label">
-      <h1><span>Batya</span><span><em>Nightingale</em></span></h1>
-      <p class="role">Molecular diagnostics and pathology, from the wet bench to the whole-slide scanner.</p>
+      <h1><span>Batya</span><span>Nightingale</span></h1>
+      <p class="role">Bioinformatician</p>
+      <p class="post">Digital Pathology Coordinator<span>NYU Langone Health</span><span>New York</span></p>
       <div class="meta">
         <div><a href="mailto:batya.nightingale@gmail.com">batya.nightingale@gmail.com</a></div>
         <div><a href="https://orcid.org/0000-0002-0706-8951">orcid 0000-0002-0706-8951</a></div>
         <div><a href="https://github.com/batyanight">github.com/batyanight</a></div>
       </div>
     </div>
-    <div class="field" aria-hidden="true">
-      <svg id="tissue" preserveAspectRatio="xMidYMid slice" viewBox="0 0 600 400"></svg>
+    <div class="field">
+      <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" role="img"
+           aria-label="Generative mark: forty chains radiating from a common centre, seed 7202">
+        <g fill="none" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round">
+        <path pathLength="1" style="--i:0" stroke="var(--c4)" d="M100 100 L107.2 90.4 L94.8 77.9 L113.7 62.9 L99.5 41.1 L100.6 43.8 L98.6 43.6 L103.3 46 L104.3 45 L102.1 51.5 L97.9 53 L96.9 57.6 L98.2 55.4 L96.4 54.4 L98.7 56.4 L101.1 54.4"/>
+        <path pathLength="1" style="--i:1" stroke="var(--c0)" d="M100 100 L107.9 96.5 L105.5 84.5 L113.8 73.9 L108.7 59.9 L107.2 62 L109.9 61.2 L107 61.6 L107.2 62.6 L105.7 62.1 L106.6 61.4 L104.8 62.5 L103.1 61.1 L100.6 66.3 L98.8 65.2 L99.9 67.9"/>
+        <path pathLength="1" style="--i:2" stroke="var(--c7)" d="M100 100 L113.1 91.6 L99.9 73.2 L121.4 61.5 L116.9 25.6 L114.5 23.8 L113.1 25.6 L117.3 26.6 L118.7 30.9 L122.6 30.5 L124.4 32.5 L123.4 30.8 L124 30.7 L125.1 33 L123.3 35.4 L125.4 37.1"/>
+        <path pathLength="1" style="--i:3" stroke="var(--c7)" d="M100 100 L116.8 96.2 L115.8 73.8 L142.8 67.4 L131.7 32 L132.8 30.6 L137.4 37 L141.1 37.7 L139.1 37.8 L137.6 40.4 L135.5 35.9 L130.9 36.4 L132 38.6 L131.2 42.2 L132.8 39.7 L132.9 36.3"/>
+        <path pathLength="1" style="--i:4" stroke="var(--c6)" d="M100 100 L114.4 96.4 L115.8 75.8 L142.1 73.5 L134 38.1 L136.3 35.6 L132.9 36.3 L132.2 35.3 L134.2 34.3 L141.2 36.4 L141.4 37.1 L140 39.6 L135.3 38.8 L135.1 35.8 L135.8 39.6 L135.7 41.7"/>
+        <path pathLength="1" style="--i:5" stroke="var(--c2)" d="M100 100 L110.1 100.7 L109.4 86.8 L126.2 84.9 L125.6 66.5 L125.1 61.4 L125.1 59.5 L127 61.9 L126.9 65.2 L126.9 65.9 L129 63.7 L128.9 71.3 L126.6 70.3 L124 78 L127.1 81.2 L130 81.4"/>
+        <path pathLength="1" style="--i:6" stroke="var(--c6)" d="M100 100 L115.1 100.8 L119.9 80.5 L141.9 82.4 L146.8 57.3 L148.1 58.9 L148.7 59.1 L147.6 57.2 L148.5 55.7 L147.8 54.3 L150 51.5 L146.3 52.5 L151.1 56.8 L151.6 57.3 L151.9 59.9 L157.1 59.5"/>
+        <path pathLength="1" style="--i:7" stroke="var(--c4)" d="M100 100 L112.1 100.2 L115.6 86.4 L134.2 97 L142.7 78.9 L142.6 79.3 L147.9 83.2 L146.9 84.3 L140.9 81 L136.7 84.7 L137 85.5 L134.1 84.4 L131.8 89.4 L135.8 87.6 L133 91.4 L132.2 90.9"/>
+        <path pathLength="1" style="--i:8" stroke="var(--c1)" d="M100 100 L108.3 101.9 L117.5 95 L129.6 103.2 L135.4 89.4 L139 89.2 L140.6 95.5 L139.2 97 L141.5 97.7 L145.4 96.2 L148.2 97.8 L145.9 96.7 L147.3 96.1 L148.8 96.2 L151.2 94.6 L152.8 96.1"/>
+        <path pathLength="1" style="--i:9" stroke="var(--c7)" d="M100 100 L114.8 107.9 L132.6 91.4 L153.1 106 L173.9 86.9 L176.1 89.3 L173.8 86.8 L177.6 85.7 L180.5 80.3 L176 77.3 L178.7 74.5 L182.1 73.8 L185.6 70.8 L188.1 70.7 L190.8 68.7 L190.5 68.8"/>
+        <path pathLength="1" style="--i:10" stroke="var(--c1)" d="M100 100 L105.9 107 L114.6 101.3 L125.1 115 L139.1 103.4 L135.6 101 L139.2 101.2 L141.2 101.5 L141.2 103.2 L143.6 102.4 L146.6 96.3 L151.2 98.2 L151.7 97.9 L153.2 99 L155 95.6 L151.9 95"/>
+        <path pathLength="1" style="--i:11" stroke="var(--c6)" d="M100 100 L110.5 109.6 L125.7 96.5 L135.6 115.1 L156.8 97.1 L154.5 96.1 L157 96.8 L156.9 94 L158.3 92.9 L158.2 96.9 L159.1 99.7 L158.7 102.3 L162 101 L163 99.7 L163.5 97.5 L165.3 96.4"/>
+        <path pathLength="1" style="--i:12" stroke="var(--c5)" d="M100 100 L106.5 112.8 L123.8 110.5 L134 128.2 L156.2 120.1 L157.2 119.4 L159.2 116.9 L160.8 120.3 L162.5 121.5 L162.7 117.2 L164 118 L164.5 114.5 L163.3 115 L157 115.9 L161.2 118 L163.6 115.4"/>
+        <path pathLength="1" style="--i:13" stroke="var(--c5)" d="M100 100 L107.5 111.9 L123.8 110.5 L127.8 132.5 L157.9 121.4 L158.2 124.1 L155.1 122.7 L154.2 122.2 L157.3 123.6 L155.9 122 L158.5 120.8 L162.2 124.5 L163.1 123.3 L164.2 123.3 L164.4 121.2 L167.6 120.2"/>
+        <path pathLength="1" style="--i:14" stroke="var(--c0)" d="M100 100 L100.8 106.6 L109.3 105.2 L110.7 118.1 L126.3 115.6 L129.5 117.1 L130.9 112.3 L129.7 110.9 L129.3 111.1 L126.2 115.1 L128.6 116 L130.9 113.9 L131.7 113.7 L134.7 113.5 L135.3 117.4 L138.8 116.3"/>
+        <path pathLength="1" style="--i:15" stroke="var(--c1)" d="M100 100 L102.6 108.7 L115 114 L114.7 129.4 L130.2 135.1 L128.5 135.3 L129.4 132.5 L133.2 131.4 L131.7 128 L129.4 131.3 L125.7 133.2 L125.5 131.3 L127.8 134.4 L127.1 138.8 L129.3 138.1 L129.7 137.4"/>
+        <path pathLength="1" style="--i:16" stroke="var(--c0)" d="M100 100 L99.6 107.3 L108.6 113.1 L109.9 124.7 L126.3 128.8 L128.6 127.4 L127.2 127.6 L126.6 129 L120.9 129.3 L121.9 129.3 L118.3 129.8 L121.8 132.8 L122.9 134.5 L129.2 133 L129.4 135.5 L130.1 132.8"/>
+        <path pathLength="1" style="--i:17" stroke="var(--c6)" d="M100 100 L93.3 114.9 L112.6 121.9 L106.9 142.9 L134.7 157.8 L137 157.8 L137.9 153 L139.9 148.2 L140 152.1 L137.3 153.3 L138.5 159.2 L138.5 160 L132.4 158.3 L128.1 157.1 L125.2 154.2 L127.3 153"/>
+        <path pathLength="1" style="--i:18" stroke="var(--c3)" d="M100 100 L97.4 111.6 L108.8 122.1 L104.1 140.1 L124.7 145.3 L123.1 140.8 L122.6 143.5 L125 141.6 L125.5 142.6 L123.8 143.8 L123.8 147.6 L119 148.7 L121.8 148.1 L122.2 145.2 L125.6 148.8 L126.8 150.6"/>
+        <path pathLength="1" style="--i:19" stroke="var(--c7)" d="M100 100 L90 111.4 L111.3 120.7 L96.1 141.5 L116.5 166.8 L115.4 164.5 L115.6 169.1 L116.2 168 L118.7 166.4 L120.2 166.7 L118.4 165.4 L117.6 162.9 L115.4 158.7 L116.2 161.6 L117.6 160.3 L118.2 162.7"/>
+        <path pathLength="1" style="--i:20" stroke="var(--c7)" d="M100 100 L90 112.6 L102.9 128.6 L87.9 148.7 L112.6 170.6 L111.4 172.7 L109.4 172.4 L108.2 169.6 L107.5 171.8 L103.7 171.2 L102.7 169.9 L103.5 174.2 L102.3 168.9 L99 169.5 L99.4 165.4 L95.8 166.4"/>
+        <path pathLength="1" style="--i:21" stroke="var(--c5)" d="M100 100 L91.2 111.4 L103.3 127.4 L93.1 146.3 L110.6 170.2 L108.9 168.6 L111.5 172.8 L109.1 174.5 L106.3 176.1 L105.7 177.1 L109.4 177.6 L110.6 178.1 L112 180.3 L110.4 184.7 L107.8 186.1 L109.3 182.8"/>
+        <path pathLength="1" style="--i:22" stroke="var(--c4)" d="M100 100 L89.3 106.3 L98.1 121.8 L79.3 133.5 L93.5 158.4 L96.7 160 L99.9 162.5 L97.8 161.8 L92.9 156.8 L95.5 161.9 L96.7 161.5 L98.1 155.5 L95.9 158 L96.6 157.2 L93.1 164.4 L95.5 163.2"/>
+        <path pathLength="1" style="--i:23" stroke="var(--c1)" d="M100 100 L90.8 101.3 L90.6 114.7 L76.8 117.4 L78.1 137.1 L81.2 139.5 L84.1 140.2 L86.1 142.6 L88.7 139 L89 138.6 L87.8 140.8 L85.3 137.4 L84.3 142.1 L80.4 139.5 L77.5 140.3 L77.6 140"/>
+        <path pathLength="1" style="--i:24" stroke="var(--c0)" d="M100 100 L92.9 101.5 L94.6 111.7 L83.5 112.5 L83 126 L80.5 126.7 L82.9 126.4 L86.1 125.2 L82.9 126.7 L85.3 126 L84.4 126.2 L86.2 129.5 L90.1 131 L93.5 128.2 L95.3 128.8 L96.8 124.3"/>
+        <path pathLength="1" style="--i:25" stroke="var(--c7)" d="M100 100 L85.2 100 L81.7 119.2 L60.1 124.8 L61.1 162 L58.8 165 L62.2 160.5 L61.6 159.6 L61.6 158.6 L62 156.3 L64.2 157.7 L69.7 157.8 L65.5 160.7 L65.7 164.3 L62.4 167 L62.1 170.9"/>
+        <path pathLength="1" style="--i:26" stroke="var(--c2)" d="M100 100 L89.4 98.9 L87.3 111.9 L70.2 112.3 L61.9 131.1 L61 131.7 L59.8 132.8 L57.7 134.6 L57 133.5 L55.8 137.9 L50 137.9 L46.4 142.2 L45.3 142.3 L43 143.6 L43.9 142.1 L47.1 142.8"/>
+        <path pathLength="1" style="--i:27" stroke="var(--c3)" d="M100 100 L90 97.4 L81.6 109.7 L64.6 103.6 L51.2 123 L50.9 123 L48.5 122.8 L46.1 121.8 L42.8 119.1 L44.8 119.9 L44.3 119.9 L40.6 119.4 L38.4 119.4 L36.9 121.1 L38.1 123.3 L37.3 122.3"/>
+        <path pathLength="1" style="--i:28" stroke="var(--c1)" d="M100 100 L91.7 98.8 L86.5 110.2 L73.3 108.8 L62.9 127.1 L62.1 127.5 L63.5 129.6 L63.7 127.9 L64.8 125.2 L65.8 129.3 L65.4 131.3 L64.3 130 L66 132.1 L66.1 131.9 L66.5 132.1 L65.1 132.8"/>
+        <path pathLength="1" style="--i:29" stroke="var(--c3)" d="M100 100 L89.4 94.7 L78.4 104.7 L60.7 97.1 L41.8 109.7 L47 111.7 L42.3 110.7 L42.5 113.3 L42.8 112.6 L41.9 116 L40 119.9 L40.3 112.1 L37.7 110.5 L37.6 107.1 L37.6 108.8 L40.3 111"/>
+        <path pathLength="1" style="--i:30" stroke="var(--c7)" d="M100 100 L86.5 89.7 L74.1 104.3 L52.9 92 L25.1 107.3 L26.6 105 L26 104.9 L23.6 110.2 L21.7 111.6 L25.1 109.3 L24.2 109.2 L22.1 108.2 L25.3 107.5 L27.1 105.7 L23.7 105.1 L24.1 104.7"/>
+        <path pathLength="1" style="--i:31" stroke="var(--c3)" d="M100 100 L91.3 93.1 L81.1 101.5 L66 90.4 L43.1 103.7 L38.4 102.1 L36.9 106.2 L37.8 108.2 L34.1 110.2 L34.8 109.2 L40.2 109.7 L41.4 110 L43.9 110.2 L39.9 110.4 L34.6 108.3 L36.6 106.6"/>
+        <path pathLength="1" style="--i:32" stroke="var(--c0)" d="M100 100 L96 94.3 L88 98.2 L80.7 91.3 L69.1 99.7 L71.1 99 L70.7 94.5 L71.7 99 L71.5 95.4 L71.8 91.9 L70.8 88.4 L71.8 86.7 L73.8 87 L72.9 86.4 L72.4 89.6 L68.2 88"/>
+        <path pathLength="1" style="--i:33" stroke="var(--c1)" d="M100 100 L98.1 91.1 L87 94.9 L80.2 84 L59.1 88.7 L56.3 89.6 L55 88.1 L57.9 84.4 L61.6 81.4 L61.5 79.6 L59.9 82.1 L60.9 79.8 L62.2 79 L59.5 80.5 L59 77.5 L61.5 76.8"/>
+        <path pathLength="1" style="--i:34" stroke="var(--c4)" d="M100 100 L92.8 88.4 L76.8 92.2 L73.7 73.3 L47.9 73.3 L48 76 L46 77.2 L50.3 77.4 L49.1 75.4 L47.9 77.1 L44.6 75.5 L42.2 76.2 L42.5 75.2 L44.3 72.9 L46.8 72.7 L45.5 72.1"/>
+        <path pathLength="1" style="--i:35" stroke="var(--c6)" d="M100 100 L97.2 85.7 L80.3 79.3 L83.8 52.3 L50.6 47.5 L49.2 50.7 L49 55.4 L50.6 57.6 L51.5 61.2 L47.4 60.7 L45 65.5 L38.6 68.8 L38.4 71.9 L40.2 74.4 L40.6 76.7 L39.5 78"/>
+        <path pathLength="1" style="--i:36" stroke="var(--c0)" d="M100 100 L101.6 92.7 L92.8 91.6 L93.6 79.4 L79.4 72.4 L78.5 72.5 L80.4 72.9 L79.4 71.4 L77.7 68 L78.8 66.9 L76.4 70.1 L74.9 70.7 L73 71.4 L77.6 68.9 L78.1 67.8 L79.9 68"/>
+        <path pathLength="1" style="--i:37" stroke="var(--c2)" d="M100 100 L103.9 91.9 L93.8 84.1 L98.7 71.2 L80.8 60.8 L79.7 61.9 L84.5 60.9 L88 59.7 L84.3 59.4 L84.6 61.4 L83.9 63.2 L84.3 63.4 L82.1 63 L81 62.3 L83.2 65.8 L81.6 65.4"/>
+        <path pathLength="1" style="--i:38" stroke="var(--c5)" d="M100 100 L102.7 86 L88.3 76.9 L96 52.4 L69 38.8 L72.1 36.3 L71.2 38.7 L71.9 37.8 L72.3 36.1 L71.3 34.4 L74.6 33.4 L74.7 32.9 L74.7 34 L71 36.4 L76 40.4 L75.6 36.1"/>
+        <path pathLength="1" style="--i:39" stroke="var(--c5)" d="M100 100 L107.2 89.4 L97.3 77.1 L106.9 57.7 L88.3 34 L86.7 34.2 L83.1 36.4 L86.9 36.2 L84.9 33.6 L85.4 33.1 L82.8 28.6 L86.9 27 L83.8 25 L83.8 27 L83.4 25.5 L85.9 28.2"/>
+        </g>
+      </svg>
     </div>
   </div>
-
-  <p class="caption">
-    <span>Nightingale, B.R.</span>
-    <span>Digital Pathology Coordinator</span>
-    <span>NYU Langone Health</span>
-    <span>2019 &ndash; present</span>
-  </p>
 </section>
 
 <!-- ABOUT -->
-<section class="wrap block rise" id="about">
+<section class="wrap block" id="about">
   <div class="head">
     <h2>About</h2>
     <span class="tally">Overview</span>
   </div>
-  <p class="lede">I build and run the molecular tests that tell clinicians and conservationists what is actually infecting an animal &mdash; and increasingly, I do it on screens instead of slides.</p>
   <div class="prose">
     <p>I currently coordinate digital pathology at NYU Langone Health's Tisch Hospital, where I support the anatomic pathology team's move to whole-slide imaging. Before that I spent five years in the Molecular Diagnostics Laboratory of the Wildlife Conservation Society at the Bronx Zoo, first as a technician and then in the pathology lab, working across the Zoological Health Program's diagnostic caseload.</p>
     <p>My work sits where assay development meets field conservation: multiplex qPCR panels for the illegal wildlife trade, pathogen screening for chelonians and iguanas from Belize to Madagascar, novel herpesvirus and papillomavirus characterization in zoo collections, and environmental DNA surveys ranging from the New York Bight to the southern flank of Mount Everest. I am the author or co-author of four peer-reviewed papers and five conference abstracts.</p>
-    <p>I hold a B.A. in Environmental Studies from Purchase College, SUNY, where my thesis used MinION nanopore sequencing to trace mercury through songbird diets in Acadia National Park.</p>
+    <p>I am a part-time master's student in bioinformatics at NYU Tandon School of Engineering, taking the degree alongside the hospital job. Before that I earned a B.A. in Environmental Studies from Purchase College, SUNY, where my thesis used MinION nanopore sequencing to trace mercury through songbird diets in Acadia National Park.</p>
   </div>
 </section>
 
-<!-- RESEARCH / PROJECTS -->
-<section class="wrap block rise" id="work">
+<!-- PROJECTS -->
+<section class="wrap block" id="projects">
+  <div class="head">
+    <h2>Projects</h2>
+    <span class="tally">2 current</span>
+  </div>
+
+  <div class="project">
+    <h3>Canine distemper virus &mdash; phylodynamics of a wildlife-maintained lineage</h3>
+    <p class="status">Core analysis complete &middot; 2025 &ndash; 2026 &middot; MIT licensed</p>
+
+    <p class="desc">Canine distemper virus (<i>Morbillivirus canis</i>) circulates in North American carnivores, but it is not obvious whether a given wildlife lineage sustains itself or is reseeded from domestic dogs. This project tests that directly: 162 public hemagglutinin sequences collected between 1992 and 2023, 95% of them from wild hosts &mdash; mostly raccoon, with coyote, striped skunk and red fox &mdash; assigned to lineage America-2 and analysed under a Bayesian phylodynamic model with discrete host-state reconstruction.</p>
+
+    <p class="desc">The host transition rates separate cleanly in one direction. Raccoon-to-wild-canid transmission is credibly elevated and raccoon-to-domestic-dog transmission credibly depressed, and ten of thirteen well-supported host transitions on the tree begin in procyonids. The lineage is being maintained in wildlife, not topped up from dogs. As a blind check on the reconstruction, it independently recovered two captive felid clusters twenty-three years apart &mdash; a lion and a leopard around 1992, and four tigers at an Indiana rescue centre around 2015 &mdash; each matching a separately published outbreak investigation, from sequence data and host labels alone.</p>
+
+    <div class="estimates">
+      <div>
+        <span class="val">1976</span>
+        <span class="hpd">95% HPD 1962 &ndash; 1985</span>
+        <span class="lab">TMRCA of the sampled lineage</span>
+      </div>
+      <div>
+        <span class="val">8.54 &times; 10<sup>&minus;4</sup></span>
+        <span class="hpd">95% HPD 6.70 &times; 10&#8315;&#8308; &ndash; 1.05 &times; 10&#8315;&#179;</span>
+        <span class="lab">Substitutions per site per year</span>
+      </div>
+      <div>
+        <span class="val">3.28</span>
+        <span class="hpd">95% HPD 1.04 &ndash; 6.31</span>
+        <span class="lab">Procyonid &harr; wild canid transition rate, against 0.12 for domestic dog &harr; procyonid</span>
+      </div>
+    </div>
+
+    <p class="caveat">Not claimed: the root state is unresolved and no inference is made about where the lineage originated. The trait model is symmetric, the locus is single, and sampling reflects surveillance effort rather than prevalence. Limitations are documented in full in the repository's methods.</p>
+
+    <dl class="spec">
+      <dt>Inference</dt>
+      <dd>BEAST 2.7.7 &mdash; two chains of 10<sup>8</sup> states, HKY+&Gamma;<sub>4</sub>, uncorrelated relaxed lognormal clock, constant-size coalescent; all ESS above 500</dd>
+      <dt>Pipeline</dt>
+      <dd>Nine numbered Python scripts from GenBank retrieval through metadata curation, MAFFT alignment and IQ-TREE ML phylogeny, alignment QC, clade delineation, stratified subsampling and BEAST2 XML generation; every excluded sequence logged with a machine-readable reason</dd>
+      <dt>Viewer</dt>
+      <dd>Nextstrain community build, served in Auspice with H-domain annotation in A75/17 coordinates</dd>
+      <dt>Reproducibility</dt>
+      <dd>Pinned conda environment, deterministic subsampling, cached accession list; outputs regenerate from the accession list rather than being committed</dd>
+    </dl>
+
+    <div class="links">
+      <a href="https://nextstrain.org/community/batyanight/cdv-phylodynamics">View the phylogeny</a>
+      <a href="https://github.com/batyanight/cdv-phylodynamics">Source on GitHub</a>
+      <a href="https://doi.org/10.5281/zenodo.22182061">Zenodo DOI</a>
+    </div>
+  </div>
+
+  <div class="project quiet">
+    <h3>ggbrn</h3>
+    <p class="status">In development &middot; 2026 &middot; not yet public</p>
+
+    <p class="desc">An R package that settles my <span class="code">ggplot2</span> defaults once instead of re-deriving them in every analysis script. It ships a theme, a set of discrete and continuous scales, and the palettes used across this site, so a figure drafted in a notebook and a figure dropped into a manuscript or a talk come out of the same place.</p>
+
+    <p class="desc">The palettes are the ramp from the mark at the top of this page &mdash; a cool-to-warm eight-stop sequence with a matched dark-ground variant &mdash; which makes it usable for ordered categories and continuous fills, not only for decoration.</p>
+
+    <dl class="spec">
+      <dt>Provides</dt>
+      <dd><span class="code">theme_brn()</span>, discrete and continuous scale constructors, and the palette set in both light and dark variants</dd>
+      <dt>Built on</dt>
+      <dd>ggplot2, following its extension conventions so the scales compose with the rest of the grammar rather than overriding it</dd>
+      <dt>Reproducibility</dt>
+      <dd>Version-pinned under renv, so a figure regenerates identically across machines</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- RESEARCH / SCREENINGS -->
+<section class="wrap block" id="work">
   <div class="head">
     <h2>Research &amp; diagnostic screenings</h2>
     <span class="tally">Selected projects</span>
   </div>
 
   <div class="year-group">
-    <div class="when">2023 &ndash; ongoing</div>
+    <div class="when">2025 &ndash; 2026</div>
+    <ul>
+      <li>Bayesian phylodynamic analysis of a wildlife-maintained canine distemper virus lineage in North American carnivores, with discrete host-state reconstruction and a Nextstrain community build &mdash; see <a href="#projects">Projects</a>.</li>
+    </ul>
+  </div>
+
+  <div class="year-group">
+    <div class="when">2023 &ndash; 2024</div>
     <ul>
       <li>Detection and characterization of a novel herpesvirus in little blue penguins (<i>Eudyptula minor</i>) at the WCS Bronx Zoo.</li>
       <li>Detection and characterization of a novel papillomavirus in slender-horned gazelles (<i>Gazella leptoceros</i>).</li>
@@ -322,10 +512,10 @@
 </section>
 
 <!-- PUBLICATIONS -->
-<section class="wrap block rise" id="publications">
+<section class="wrap block" id="publications">
   <div class="head">
     <h2>Publications</h2>
-    <span class="tally">4 peer-reviewed &middot; <a href="https://orcid.org/0000-0002-0706-8951" style="color:var(--hema);text-decoration:none;border-bottom:1px solid var(--rule);">full list on ORCID</a></span>
+    <span class="tally">4 peer-reviewed &middot; <a href="https://orcid.org/0000-0002-0706-8951">full list on ORCID</a></span>
   </div>
 
   <article class="pub">
@@ -354,7 +544,7 @@
 </section>
 
 <!-- TALKS -->
-<section class="wrap block rise" id="talks">
+<section class="wrap block" id="talks">
   <div class="head">
     <h2>Conference abstracts &amp; presentations</h2>
     <span class="tally">6 presented</span>
@@ -387,7 +577,7 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section class="wrap block rise" id="experience">
+<section class="wrap block" id="experience">
   <div class="head">
     <h2>Experience</h2>
     <span class="tally">2019 &ndash; present</span>
@@ -431,7 +621,7 @@
 </section>
 
 <!-- FACTS -->
-<section class="wrap block rise" id="background">
+<section class="wrap block" id="background">
   <div class="head">
     <h2>Education, awards &amp; languages</h2>
     <span class="tally">Background</span>
@@ -439,7 +629,9 @@
   <div class="facts">
     <div>
       <h3>Education</h3>
-      <p>B.A. Environmental Studies, 2019</p>
+      <p>M.S. Bioinformatics, in progress</p>
+      <p class="sub">NYU Tandon School of Engineering &mdash; part-time</p>
+      <p style="margin-top:1rem">B.A. Environmental Studies, 2019</p>
       <p class="sub">Purchase College, SUNY</p>
     </div>
     <div>
@@ -456,7 +648,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="wrap contact rise" id="contact">
+<section class="wrap contact" id="contact">
   <div class="head">
     <h2>Get in touch</h2>
     <span class="tally">New York, NY</span>
@@ -476,60 +668,7 @@
 </footer>
 
 <script>
-(function(){
   document.getElementById('yr').textContent = new Date().getFullYear();
-
-  /* Stained tissue field: hematoxylin nuclei over eosin stroma.
-     Seeded so the composition is stable across loads. */
-  var svg = document.getElementById('tissue');
-  if(svg){
-    var seed = 20250819;
-    function rnd(){ seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; }
-    var ns = 'http://www.w3.org/2000/svg', frag = document.createDocumentFragment();
-
-    // eosinophilic background wash
-    for(var i=0;i<70;i++){
-      var b = document.createElementNS(ns,'ellipse');
-      b.setAttribute('cx', (rnd()*640-20).toFixed(1));
-      b.setAttribute('cy', (rnd()*440-20).toFixed(1));
-      b.setAttribute('rx', (28+rnd()*70).toFixed(1));
-      b.setAttribute('ry', (22+rnd()*55).toFixed(1));
-      b.setAttribute('fill', '#C0697F');
-      b.setAttribute('opacity', (0.03+rnd()*0.06).toFixed(3));
-      frag.appendChild(b);
-    }
-    // nuclei, clustered
-    for(var c=0;c<16;c++){
-      var hx = rnd()*600, hy = rnd()*400, n = 8+Math.floor(rnd()*16);
-      for(var j=0;j<n;j++){
-        var e = document.createElementNS(ns,'ellipse');
-        var a = rnd()*Math.PI*2, d = rnd()*58;
-        e.setAttribute('cx', (hx+Math.cos(a)*d).toFixed(1));
-        e.setAttribute('cy', (hy+Math.sin(a)*d*0.8).toFixed(1));
-        e.setAttribute('rx', (2.6+rnd()*3.4).toFixed(1));
-        e.setAttribute('ry', (2.0+rnd()*2.6).toFixed(1));
-        e.setAttribute('transform','rotate('+(rnd()*180).toFixed(0)+' '+(hx).toFixed(1)+' '+(hy).toFixed(1)+')');
-        e.setAttribute('fill', '#4B3A79');
-        e.setAttribute('opacity', (0.16+rnd()*0.34).toFixed(3));
-        frag.appendChild(e);
-      }
-    }
-    svg.appendChild(frag);
-  }
-
-  /* Section reveal */
-  var items = document.querySelectorAll('.rise');
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){ en.target.classList.add('seen'); io.unobserve(en.target); }
-      });
-    }, {rootMargin:'0px 0px -8% 0px'});
-    items.forEach(function(el){ io.observe(el); });
-  } else {
-    items.forEach(function(el){ el.classList.add('seen'); });
-  }
-})();
 </script>
 </body>
 </html>
