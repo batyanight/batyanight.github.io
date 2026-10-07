@@ -1,4 +1,4 @@
-# Batya Nightingale
+# Batya R. Nightingale
 
 **Bioinformatician**  
 *Molecular diagnostics, genomics, and digital pathology for wildlife health*  
