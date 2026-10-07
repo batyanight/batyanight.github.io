@@ -258,6 +258,15 @@
   .facts p{margin:0 0 .5rem;font-size:.96rem;max-width:34ch;}
   .facts .sub{color:var(--muted);font-size:.88rem;}
 
+  /* ---------- services ---------- */
+  .offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 2.6rem;margin-top:.4rem;max-width:62rem;}
+  @media(max-width:720px){.offers{grid-template-columns:1fr;}}
+  .offer{border-top:2px solid var(--ember);padding-top:1rem;}
+  .offer h3{font-family:var(--display);font-weight:400;font-size:1.18rem;line-height:1.35;margin:0 0 .55rem;}
+  .offer p{margin:0 0 .7rem;color:var(--muted);font-size:.95rem;max-width:52ch;}
+  .offer .out{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin:0;}
+  .offer .out b{color:var(--ink);font-weight:500;}
+
   /* ---------- contact ---------- */
   .contact{border-top:1px solid var(--rule);padding-top:clamp(2.8rem,6vw,4.2rem);padding-bottom:clamp(3rem,6vw,4.5rem);}
   .contact .lede{margin-bottom:2rem;}
@@ -299,6 +308,7 @@
       <a href="#publications">Publications</a>
       <a href="#talks">Talks</a>
       <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -650,13 +660,46 @@
   </div>
 </section>
 
+<!-- SERVICES -->
+<section class="wrap block" id="services">
+  <div class="head">
+    <h2>Project work</h2>
+    <span class="tally">Fixed scope &middot; written plan up front</span>
+  </div>
+  <div class="prose">
+    <p>I take on small, well-defined projects for conservation programs, zoos, wildlife agencies and research labs &mdash; work that needs someone who has run the assay at the bench and can also write the code. Each project starts with a short call and a written scope listing the deliverables, so you know exactly what you are getting.</p>
+  </div>
+  <div class="offers">
+    <div class="offer">
+      <h3>Assay check-up</h3>
+      <p>Your PCR and qPCR primers and probes re-screened against the sequences now in public databases. I report where mismatches have appeared, in which lineages, and whether the assay still detects what it was validated to detect.</p>
+      <p class="out"><b>You get</b> a written report, mismatch tables and the rerunnable analysis.</p>
+    </div>
+    <div class="offer">
+      <h3>Sequencing analysis for small labs</h3>
+      <p>MinION or Illumina data turned into answers: pathogen identification, consensus genomes, eDNA and metabarcoding, for labs that generate sequence data but have no bioinformatician on staff.</p>
+      <p class="out"><b>You get</b> annotated results, figures and documented code you can rerun.</p>
+    </div>
+    <div class="offer">
+      <h3>Pathogen phylogenetics</h3>
+      <p>Where did this outbreak come from, and is it being maintained in wildlife? Curated public and in-house sequences, phylogenetic and phylodynamic analysis, and an interactive Nextstrain build, as in the distemper project above.</p>
+      <p class="out"><b>You get</b> trees, a methods write-up and a shareable interactive build.</p>
+    </div>
+    <div class="offer">
+      <h3>Digital pathology planning</h3>
+      <p>For veterinary and zoo pathology services considering whole-slide imaging: workflow design, case and file organization, and what it takes to digitize and search a slide archive.</p>
+      <p class="out"><b>You get</b> a written plan matched to your caseload and staff.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="wrap contact" id="contact">
   <div class="head">
     <h2>Get in touch</h2>
     <span class="tally">New York, NY</span>
   </div>
-  <p class="lede">Open to conversations and project work in molecular diagnostics, genomics, and digital pathology for wildlife health.</p>
+  <p class="lede">Open to conversations and project work in molecular diagnostics, genomics, and digital pathology for wildlife health. For a project, email a few sentences about what you need and I will reply with a proposed scope.</p>
   <div class="links">
     <a href="mailto:batya.nightingale@gmail.com">Email</a>
     <a href="https://orcid.org/0000-0002-0706-8951">ORCID</a>
