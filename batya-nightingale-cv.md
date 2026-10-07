@@ -4,7 +4,7 @@
 *Molecular diagnostics, genomics, and digital pathology for wildlife health*  
 Digital Pathology Coordinator, NYU Langone Health — New York, NY
 
-batya.nightingale@gmail.com · [ORCID 0000-0002-0706-8951](https://orcid.org/0000-0002-0706-8951) · [github.com/batyanight](https://github.com/batyanight)
+batya.nightingale@gmail.com · [ORCID 0000-0002-0706-8951](https://orcid.org/0000-0002-0706-8951) · [Google Scholar](https://scholar.google.com/citations?user=CTwEEr8AAAAJ) · [github.com/batyanight](https://github.com/batyanight)
 
 ---
 
