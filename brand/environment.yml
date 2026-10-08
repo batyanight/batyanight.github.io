@@ -1,0 +1,7 @@
+name: brand
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - numpy>=1.17      # default_rng; output is identical across numpy versions
+  - cairosvg          # PNG export for banner.py (not needed for SVG-only)
