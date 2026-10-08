@@ -1,0 +1,22 @@
+Copyright (c) 2026 Batya R. Nightingale. All rights reserved.
+
+This license covers everything in the brand/ directory of this repository,
+including:
+
+  - the "chains" logo and every rendered version of it (brand/logo/*.svg)
+  - the LinkedIn banner artwork (brand/banner/output/*)
+  - the scripts that generate them (brand/logo/mark.py, brand/banner/banner.py)
+  - the colour palettes defined in those scripts, as used to render the logo
+    and banner
+
+The logo and banner identify Batya R. Nightingale and her professional work.
+No license is granted to copy, modify, distribute, display, or use any of
+these materials, or any derivative of them, for any purpose, including as a
+logo, avatar, banner, icon, or other identifying mark, without prior written
+permission from the copyright holder.
+
+Being able to view or fork this repository under GitHub's Terms of Service
+does not grant any rights beyond what those terms require.
+
+For permission requests, contact Batya R. Nightingale through
+https://batyanight.github.io.

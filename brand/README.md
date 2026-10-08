@@ -5,8 +5,12 @@ Everything here is deterministic: the same seed and parameters always produce
 the same output, so the scripts are the real source of truth and the SVG/PNG
 files are just cached renders.
 
+**All rights reserved.** The logo, banner, and generator scripts are not
+licensed for reuse. See [`LICENSE`](LICENSE).
+
 ```
 brand/
+├── LICENSE                all rights reserved
 ├── environment.yml        conda env (numpy, cairosvg)
 ├── logo/
 │   ├── mark.py            logo generator
