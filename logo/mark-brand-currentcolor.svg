@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<g fill="none" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+        <path stroke="currentColor" d="M100 100 L108.7 89.2 L94.9 74.1 L117.5 57.7 L101.9 31.9 L103.2 34.9 L100.9 34.7"/>
+        <path stroke="currentColor" d="M100 100 L114 93 L109.4 75.7 L132.2 62.3 L124.2 32.8 L125.7 30.3 L123.6 29.1"/>
+        <path stroke="currentColor" d="M100 100 L114.3 100.1 L123.5 82.3 L148 90 L164.4 61.3 L162.1 59.3 L158.4 56"/>
+        <path stroke="currentColor" d="M100 100 L107.1 113.9 L127.1 115.2 L139.3 139 L168.2 140.8 L169.3 140 L167.2 141.3"/>
+        <path stroke="currentColor" d="M100 100 L97.5 110.5 L111.9 117.3 L106 138.2 L128.7 140.1 L126 143.4 L128.6 148.4"/>
+        <path stroke="currentColor" d="M100 100 L96.8 116.4 L114 127.3 L96.2 152.4 L121.3 180.1 L122.9 185.1 L127.5 184.7"/>
+        <path stroke="currentColor" d="M100 100 L91.5 99.9 L91.4 110.4 L79 114.2 L81.1 133.1 L83.6 135 L81.2 133.4"/>
+        <path stroke="currentColor" d="M100 100 L80.6 94.3 L68.7 117.8 L37.9 99.1 L7.9 127 L13.3 134.3 L17.4 135.1"/>
+        <path stroke="currentColor" d="M100 100 L98.4 90.8 L84.6 94.1 L80.4 79 L61.2 82.7 L63.7 81.7 L67.9 83.6"/>
+        <path stroke="currentColor" d="M100 100 L102.9 82.7 L79.7 69.8 L88 39.3 L55.4 27.9 L61.3 33.6 L63.1 36.2"/>
+        </g>
+</svg>
