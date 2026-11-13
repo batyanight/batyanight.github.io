@@ -2,7 +2,7 @@
 
 **Bioinformatician**  
 *Molecular diagnostics, genomics, and digital pathology for wildlife health*  
-Digital Pathology Coordinator, NYU Langone Health — New York, NY
+Digital Pathology Coordinator, NYU Langone Health, New York, NY
 
 batya.nightingale@gmail.com · [ORCID 0000-0002-0706-8951](https://orcid.org/0000-0002-0706-8951) · [Google Scholar](https://scholar.google.com/citations?user=CTwEEr8AAAAJ) · [github.com/batyanight](https://github.com/batyanight)
 
@@ -10,16 +10,16 @@ batya.nightingale@gmail.com · [ORCID 0000-0002-0706-8951](https://orcid.org/000
 
 ## Profile
 
-Molecular diagnostics and pathology specialist moving into computational biology. Five years of wildlife disease diagnostics at the Wildlife Conservation Society — multiplex qPCR panel development, multi-pathogen screening across international field programs, environmental DNA, and novel virus characterization — now coordinating digital pathology operations at NYU Langone Health while completing a master's in bioinformatics. Current work is phylodynamic: Bayesian inference of host transmission structure from viral sequence data, built as reproducible, version-controlled pipelines.
+Molecular diagnostics and pathology specialist moving into computational biology. Five years of wildlife disease diagnostics at the Wildlife Conservation Society (multiplex qPCR panel development, multi-pathogen screening across international field programs, environmental DNA, and novel virus characterization), now coordinating digital pathology operations at NYU Langone Health while completing a master's in bioinformatics. Current work is phylodynamic: Bayesian inference of host transmission structure from viral sequence data, built as reproducible, version-controlled pipelines.
 
 ---
 
 ## Education
 
-**M.S. Bioinformatics** — *in progress*
-NYU Tandon School of Engineering, Brooklyn, NY — part-time
+**M.S. Bioinformatics**, *in progress*
+NYU Tandon School of Engineering, Brooklyn, NY, part-time
 
-**B.A. Environmental Studies** — 2019
+**B.A. Environmental Studies**, 2019
 Purchase College, SUNY, Purchase, NY
 Thesis: songbird diet analysis by fecal metabarcoding in Acadia National Park using MinION nanopore sequencing
 
@@ -28,18 +28,18 @@ Thesis: songbird diet analysis by fecal metabarcoding in Acadia National Park us
 ## Experience
 
 ### Digital Pathology Coordinator
-**NYU Langone Health, Tisch Hospital** — New York, NY · 2024 – present
+**NYU Langone Health, Tisch Hospital**, New York, NY · 2024 – present
 
 - Coordinates anatomic pathology digital workflows and whole-slide imaging operations, supporting the department's transition to whole-slide review.
 
 ### Pathology Laboratory Technician
-**Wildlife Conservation Society, Bronx Zoo** — Zoological Health Program · 2022 – 2024
+**Wildlife Conservation Society, Bronx Zoo**, Zoological Health Program · 2022 – 2024
 
 - Diagnostic pathology support across the zoo's caseload, including detection and characterization of novel viruses in collection animals.
 - Contributed to published and presented work on papillomavirus in slender-horned gazelles and *Helicobacter*-associated carditis in common degus.
 
 ### Molecular Diagnostics Technician
-**Wildlife Conservation Society, Bronx Zoo** — Molecular Diagnostics Laboratory · 2019 – 2022
+**Wildlife Conservation Society, Bronx Zoo**, Molecular Diagnostics Laboratory · 2019 – 2022
 
 - Multi-pathogen qPCR screening panels for chelonians, iguanas and amphibians across international field programs in Belize, Madagascar, Cambodia, Myanmar, the Cayman Islands and the northeastern United States.
 - Assay development for wildlife-trade forensics and environmental DNA detection of rare species.
@@ -49,7 +49,7 @@ Thesis: songbird diet analysis by fecal metabarcoding in Acadia National Park us
 
 ## Projects
 
-### Canine distemper virus — phylodynamics of a wildlife-maintained lineage
+### Canine distemper virus: phylodynamics of a wildlife-maintained lineage
 *2025 – 2026 · core analysis complete · MIT licensed*
 [Interactive phylogeny](https://nextstrain.org/community/batyanight/cdv-phylodynamics) · [Source](https://github.com/batyanight/cdv-phylodynamics) · [DOI 10.5281/zenodo.22182061](https://doi.org/10.5281/zenodo.22182061)
 
@@ -57,11 +57,11 @@ Bayesian phylodynamic analysis testing whether a North American canine distemper
 
 - Host transition rates separate directionally: procyonid ↔ wild canid at 3.28 (95% HPD 1.04–6.31) against 0.12 (95% HPD 0.00005–0.60) for domestic dog ↔ procyonid; 10 of 13 well-supported host transitions originate in procyonids. The lineage is wildlife-maintained.
 - Substitution rate 8.54 × 10⁻⁴ subs/site/year (95% HPD 6.70 × 10⁻⁴ – 1.05 × 10⁻³); TMRCA 1976 (95% HPD 1962–1985).
-- Reconstruction independently recovered two captive felid outbreak clusters twenty-three years apart — a lion and leopard c. 1992 and four tigers at an Indiana rescue centre c. 2015 — each matching a separately published outbreak investigation, from sequence and host labels alone.
+- Reconstruction independently recovered two captive felid outbreak clusters twenty-three years apart (a lion and leopard c. 1992 and four tigers at an Indiana rescue centre c. 2015), each matching a separately published outbreak investigation, from sequence and host labels alone.
 - **Methods:** BEAST 2.7.7, two chains of 10⁸ states, HKY+Γ₄, uncorrelated relaxed lognormal clock, constant-size coalescent, all ESS > 500. Nine-stage Python pipeline from GenBank retrieval through metadata curation, MAFFT alignment, IQ-TREE ML phylogeny, alignment QC, clade delineation, stratified subsampling and BEAST2 XML generation, with every excluded sequence logged with a machine-readable reason. Pinned conda environment; outputs regenerate from a cached accession list. Nextstrain community build served in Auspice.
 - **Limitations:** root state unresolved, no claim made about lineage origin; symmetric trait model; single locus; sampling reflects surveillance effort rather than prevalence.
 
-### ggbrn — R package
+### ggbrn: R package
 *2026 · in development · not yet public*
 
 A ggplot2 extension packaging a consistent figure aesthetic: `theme_brn()`, discrete and continuous scale constructors, and a cool-to-warm eight-stop palette set with a matched dark-ground variant, usable for ordered categories and continuous fills. Built to ggplot2 extension conventions so the scales compose with the grammar rather than overriding it. Version-pinned for reproducibility across machines.
@@ -91,7 +91,7 @@ A ggplot2 extension packaging a consistent figure aesthetic: `theme_brn()`, disc
 - Four-pathogen screening of southern river terrapins (*Batagur affinis*), Cambodia, and Burmese roofed turtles (*Batagur trivittata*), Myanmar.
 
 **2019**
-- Songbird diet analysis by fecal metabarcoding in Acadia National Park using MinION high-throughput sequencing — undergraduate thesis.
+- Songbird diet analysis by fecal metabarcoding in Acadia National Park using MinION high-throughput sequencing (undergraduate thesis).
 
 ---
 
@@ -125,20 +125,20 @@ Next-generation sequencing reveals trophic transfer of mercury in Acadia Nationa
 
 ## Technical Skills
 
-**Molecular** — multiplex and singleplex qPCR assay design and validation, conventional PCR, primer design and validation, multi-pathogen diagnostic panels, environmental DNA collection and processing, fecal metabarcoding, Sanger and MinION nanopore sequencing, novel virus detection and characterization, anatomic pathology laboratory support, whole-slide imaging workflows.
+**Molecular**: multiplex and singleplex qPCR assay design and validation, conventional PCR, primer design and validation, multi-pathogen diagnostic panels, environmental DNA collection and processing, fecal metabarcoding, Sanger and MinION nanopore sequencing, novel virus detection and characterization, anatomic pathology laboratory support, whole-slide imaging workflows.
 
-**Computational** — R, Python, bash. Phylogenetics and phylodynamics: BEAST2, IQ-TREE, MAFFT, Nextstrain (Augur, Auspice). Reproducible environments with conda and renv. Git and GitHub for version control.
+**Computational**: R, Python, bash. Phylogenetics and phylodynamics: BEAST2, IQ-TREE, MAFFT, Nextstrain (Augur, Auspice). Reproducible environments with conda and renv. Git and GitHub for version control.
 
 ---
 
 ## Awards
 
-American Genetic Association Tuition Scholarship — 2023
-Purchase College Affiliates Award for Senior Excellence — 2018
+American Genetic Association Tuition Scholarship, 2023
+Purchase College Affiliates Award for Senior Excellence, 2018
 
 ---
 
 ## Languages
 
-English — native
-American Sign Language — New York metro dialect
+English (native)
+American Sign Language (New York metro dialect)
